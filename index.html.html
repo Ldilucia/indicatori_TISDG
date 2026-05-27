@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicatori Storici - TiSDG</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            min-height: 600px;
+        }
+
+        .sidebar {
+            background: #fafafa;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            height: fit-content;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .indicator-list {
+            list-style: none;
+        }
+
+        .indicator-list li {
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            padding: 0.7rem;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .indicator-list li:hover {
+            background: #e8f4f8;
+            transform: translateX(5px);
+        }
+
+        .indicator-list li.active {
+            background: #3498db;
+            color: white;
+            font-weight: 500;
+        }
+
+        .chart-container {
+            background: white;
+            border: 1px solid #
